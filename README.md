@@ -1,5 +1,5 @@
-# Codellama - 7b with AWQ
-Code Llama is a collection of pretrained and fine-tuned generative text models ranging in scale from 7 billion to 34 billion parameters. This is the repository for the 7B Python specialist version. This model is designed for general code synthesis and understanding. 
+# Smaug-72B
+Smaug-72B - which is a current topper of the Hugging Face LLM leaderboard and it’s the first model with an average score of 80. Smaug-72B is finetuned directly from moreh/MoMo-72B-lora-1.8.7-DPO and is ultimately based on Qwen-72B.
 
 ---
 ## Prerequisites
@@ -39,7 +39,7 @@ The following is a sample Input and Output JSON for this model which you can use
   "inputs": [
     {
       "data": [
-        "def factorial(int n):"
+        "What is quantization?"
       ],
       "name": "prompt",
       "shape": [
@@ -80,7 +80,7 @@ curl --location '<your_inference_url>' \
                   "inputs": [
                     {
                       "data": [
-                        "def factorial(int n):"
+                        "What is quantization?"
                       ],
                       "name": "prompt",
                       "shape": [
