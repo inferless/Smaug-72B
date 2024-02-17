@@ -3,6 +3,6 @@ INPUT_SCHEMA = {
         'datatype': 'STRING',
         'required': True,
         'shape': [1],
-        'example': ["def factorial(int n):"]
+        'example': ["What is quantization?"]
     }
 }
