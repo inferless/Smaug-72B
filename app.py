@@ -1,37 +1,17 @@
-import os
-from vllm import SamplingParams
-from vllm import LLM
-from huggingface_hub import snapshot_download
-
+from vllm import LLM, SamplingParams
 
 class InferlessPythonModel:
     def initialize(self):
-        self.template = """SYSTEM: You are a helpful assistant.
-        USER: {}
-        ASSISTANT: """
-        snapshot_download(
-            "TheBloke/CodeLlama-7B-Python-AWQ",
-            local_dir="/model",
-            token="<<your_token>>",
-        )
-        self.llm = LLM(
-          model="/model",
-          quantization="awq",
-          dtype="float16")
-    
+
+        self.sampling_params = SamplingParams(temperature=0.7, top_p=0.95,max_tokens=256)
+        self.llm = LLM(model="LoneStriker/Smaug-72B-v0.1-GPTQ", quantization="gptq", dtype="float16",max_model_len=2048)
+
     def infer(self, inputs):
-        print("inputs[prompt] -->", inputs["prompt"], flush=True)
         prompts = inputs["prompt"]
-        print("Prompts -->", prompts, flush=True)
-        sampling_params = SamplingParams(
-            temperature=1.0,
-            top_p=1,
-            max_tokens=512
-        )
-        result = self.llm.generate(prompts, sampling_params)
+        result = self.llm.generate(prompts, self.sampling_params)
         result_output = [output.outputs[0].text for output in result]
 
-        return {"result": result_output[0]}
+        return {'gresult': result_output[0]}
 
-    def finalize(self, args):
+    def finalize(self):
         pass
