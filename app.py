@@ -11,7 +11,7 @@ class InferlessPythonModel:
         result = self.llm.generate(prompts, self.sampling_params)
         result_output = [output.outputs[0].text for output in result]
 
-        return {'gresult': result_output[0]}
+        return {'generated_result': result_output[0]}
 
     def finalize(self):
         pass
