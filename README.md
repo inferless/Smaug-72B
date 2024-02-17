@@ -1,5 +1,19 @@
-# Smaug-72B
-Smaug-72B - which is a current topper of the Hugging Face LLM leaderboard and it’s the first model with an average score of 80. Smaug-72B is finetuned directly from moreh/MoMo-72B-lora-1.8.7-DPO and is ultimately based on Qwen-72B.
+# Tutorial - Deploy Smaug-72B
+- Smaug-72B - which is a current topper of the Hugging Face LLM leaderboard and it’s the first model with an average score of 80.
+- Check out [this tutorial](https://tutorials.inferless.com/deploy-deci-7b-using-inferless) which will guide you through the process of deploying a Smaug-72B model using Inferless.
+
+## TL;DR - Deploy Smaug-72B using Inferless:
+- Deployment of Deploy Smaug-72B model using [vLLM](https://github.com/vllm-project/vllm).
+
+- By using the vLLM, you can expect an average latency of 8.01 sec, generating an average of 29.94 tokens/sec where each token took 33.39 ms and an average cold start time of 26.65 sec using an A100 GPU(80GB).
+- Dependencies defined in inferless-runtime-config.yaml.
+- GitHub/GitLab template creation with app.py and config.yaml.
+- Model class in app.py with initialize, infer, and finalize functions.
+- Custom runtime creation with necessary system and Python packages.
+- Model import via GitHub with input/output parameters in JSON.
+- Recommended GPU: NVIDIA A100 for optimal performance.
+- Custom runtime selection in advanced configuration.
+- Final review and deployment on the Inferless platform.
 
 ---
 ## Prerequisites
