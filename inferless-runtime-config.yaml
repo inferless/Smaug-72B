@@ -3,6 +3,6 @@ build:
   system_packages:
     - "libssl-dev"
   python_packages:
-    - "transformers"
+    - "transformers==4.37.2"
     - "accelerate"
     - "vllm"
