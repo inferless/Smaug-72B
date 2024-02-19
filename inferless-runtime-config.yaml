@@ -4,5 +4,5 @@ build:
     - "libssl-dev"
   python_packages:
     - "transformers==4.37.2"
-    - "accelerate"
+    - "accelerate==0.27.2"
     - "vllm"
