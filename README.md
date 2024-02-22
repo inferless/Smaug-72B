@@ -1,6 +1,6 @@
 # Tutorial - Deploy Smaug-72B
 - Smaug-72B - which is a current topper of the Hugging Face LLM leaderboard and it’s the first model with an average score of 80.
-- Check out [this tutorial](https://tutorials.inferless.com/deploy-deci-7b-using-inferless) which will guide you through the process of deploying a Smaug-72B model using Inferless.
+- Check out [this tutorial](https://tutorials.inferless.com/deploy-openllm-leaderboard-topper-smaug-72b-using-inferless) which will guide you through the process of deploying a Smaug-72B model using Inferless.
 
 ## TL;DR - Deploy Smaug-72B using Inferless:
 - Deployment of Deploy Smaug-72B model using [vLLM](https://github.com/vllm-project/vllm).
