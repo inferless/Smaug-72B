@@ -19,13 +19,16 @@ configuration:
   custom_volume_id: ''
   custom_volume_name: ''
 
-  gpu_type: T4
+  gpu_type: A100
   inference_time: '180'
   is_dedicated: true
   is_serverless: false
   max_replica: '1'
   min_replica: '0'
   scale_down_delay: '600'
+  region: region-2
+  vcpu: '20.0'
+  ram: '200'
 env:
   # Add your environment variables here
   # ENV: 'PROD'
